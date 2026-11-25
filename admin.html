@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Student Result Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2>Student Result Portal</h2>
+        <div>
+            <span>Admin Dashboard</span>
+            <button id="logoutBtn" class="btn">Logout</button>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <h1>Welcome, Admin!</h1>
+        <p>Manage students and their academic records.</p>
+
+        <!-- Add New Student -->
+        <section class="form-card">
+            <h2>Add New Student</h2>
+
+            <form id="studentForm" class="form-grid">
+
+                <input
+                    type="text"
+                    id="rollNo"
+                    placeholder="Student ID / Roll Number"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Student Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Student Email"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="course"
+                    placeholder="Course"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="semester"
+                    placeholder="Semester"
+                    min="1"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="department"
+                    placeholder="Department"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Phone Number"
+                >
+
+                <input
+                    type="password"
+                    id="studentPassword"
+                    placeholder="Student Password"
+                    required
+                >
+
+                <button type="submit" class="btn">
+                    Add Student
+                </button>
+
+            </form>
+        </section>
+
+        <!-- Student Records -->
+        <section class="form-card">
+            <h2>Student Records</h2>
+
+            <input
+                type="text"
+                id="searchStudent"
+                placeholder="Search by Student ID or Name"
+            >
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Course</th>
+                            <th>Semester</th>
+                            <th>Department</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTableBody">
+                        <tr>
+                            <td colspan="6">Loading students...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/common.js"></script>
+    <script src="js/admin.js"></script>
+
+</body>
+</html>

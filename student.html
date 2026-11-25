@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2>🎓 Student Dashboard</h2>
+    <button onclick="logout()">Logout</button>
+</nav>
+
+<main class="dashboard">
+
+    <h1>My Academic Dashboard</h1>
+
+    <section class="profile-card">
+        <h2>Student Profile</h2>
+
+        <div id="profile">
+            Loading student information...
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stat-card">
+            <h3>Examinations</h3>
+            <h2 id="examCount">0</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>Latest Percentage</h3>
+            <h2 id="percentage">0%</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>Latest Grade</h3>
+            <h2 id="grade">-</h2>
+        </div>
+    </section>
+
+    <h2>My Examination Results</h2>
+
+    <div id="resultsContainer">
+        Loading results...
+    </div>
+
+</main>
+
+<script src="js/common.js"></script>
+<script src="js/student.js"></script>
+
+</body>
+</html>
